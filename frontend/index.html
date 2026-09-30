@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Tech Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand">
+        <span class="brand-icon">⚡</span>
+        <h1 class="brand-title">Student Tech Hub</h1>
+      </div>
+      <p class="tagline">Empowering students through technology, hands-on workshops, and community events.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    
+    <!-- Hero / Intro Banner -->
+    <section class="hero-card">
+      <div class="hero-content">
+        <h2>Welcome to the Tech Community</h2>
+        <p>Explore upcoming workshops, hackathons, and guest lectures designed to level up your technical skills. Connect with fellow student builders!</p>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section events-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Upcoming Technical Events</h2>
+          <p class="section-subtitle">Click the button below to fetch the latest schedule directly from the Python FastAPI backend.</p>
+        </div>
+        <button id="loadEventsBtn" class="btn btn-primary">
+          <span class="btn-icon">🔄</span>
+          <span id="loadEventsBtnText">Load Events</span>
+        </button>
+      </div>
+
+      <!-- Events Display Area -->
+      <div id="eventsContainer" class="events-grid">
+        <div class="placeholder-card">
+          <div class="placeholder-icon">📅</div>
+          <h3>No events loaded yet</h3>
+          <p>Click the <strong>Load Events</strong> button above to retrieve upcoming events from the backend server.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="section registration-section">
+      <div class="registration-card">
+        <div class="card-header">
+          <span class="section-badge">Join Us</span>
+          <h2 class="section-title">Student Registration</h2>
+          <p class="section-subtitle">Sign up to get access to workshops, hackathon alerts, and tech mentorship.</p>
+        </div>
+
+        <!-- Feedback Alert Box -->
+        <div id="statusMessage" class="status-box" style="display: none;"></div>
+
+        <!-- Form -->
+        <form id="registrationForm" class="registration-form" novalidate>
+          <div class="form-group">
+            <label for="studentName">Full Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="studentName" 
+              name="name" 
+              placeholder="e.g., Alex Johnson" 
+              required
+              autocomplete="name"
+            >
+            <span class="field-error" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="studentEmail">Email Address <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="studentEmail" 
+              name="email" 
+              placeholder="e.g., alex@university.edu" 
+              required
+              autocomplete="email"
+            >
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn btn-submit">
+            <span class="btn-icon">🚀</span>
+            <span id="submitBtnText">Register Now</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Student Tech Hub. Built with pure HTML, CSS, JavaScript, and Python FastAPI.</p>
+      <p class="footer-links">
+        Backend API: <a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a> | 
+        <a href="http://127.0.0.1:8000/docs" target="_blank" rel="noopener">Interactive API Docs</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
